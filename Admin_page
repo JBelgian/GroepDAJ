@@ -1,0 +1,42 @@
+## LABELS ##
+
+title_all = Label(text="ENKELE RESERVATIE", bg="DodgerBlue3", fg="White", font=('Helvetica', 20, "bold"))
+title_all.place(x=370, y=210)
+
+vak = Label(text="Vak", bg="DodgerBlue3", fg="White", font=('Helvetica', 12))
+vak.place(x=370, y=260)
+
+rij = Label(text="Rij", bg="DodgerBlue3", fg="White", font=('Helvetica', 12))
+rij.place(x=370, y=310)
+
+stoel = Label(text="Stoel nummer", bg="DodgerBlue3", fg="White", font=('Helvetica', 12))
+stoel.place(x=368, y=360)
+
+title_all = Label(text="ALLE RESERVATIES", bg="DodgerBlue3", fg="White", font=('Helvetica', 20, "bold"))
+title_all.place(x=370, y=550)
+
+## TEKSTVAKKEN ##
+vak = StringVar
+rij = StringVar
+stoel = StringVar
+
+# FIRSTNAME
+vak_entry = Entry(textvariable=vak, width=10, highlightthickness=2)
+vak_entry.place(x=540, y=260, height=30)
+# LASTNAME
+rij_entry = Entry(admin_page, textvariable=rij, show="*", width=10, highlightthickness=2)
+rij_entry.place(x=540, y=310, height=30)
+# EMAIL
+email_entry = Entry(textvariable=stoel, width=10, highlightthickness=2)
+email_entry.place(x=540, y=360, height=30)
+
+# BUTTON CONNECT
+delete_button1 = Button(admin_page, text="Verwijder reservatie", width="30", command=delete_resevation(), bg="White")
+delete_button1.place(x=370, y=410, height="30")
+
+# BUTTON CONNECT
+delete_button2 = Button(admin_page, text="Verwijder alle reservaties", width="30", command=delete_all_reservations(),
+                        bg="White")
+delete_button2.place(x=370, y=600, height="30")
+
+admin_page.mainloop()
